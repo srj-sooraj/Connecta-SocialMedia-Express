@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>Create Account</h2>
+
+    <form id="signup">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="cpassword" placeholder="Confirm Password" required>
+      <textarea id="description" placeholder="Tell something about yourself"></textarea>
+      <p>
+            <label for="">Profile:</label>
+            <input type="file" name="file" id="imageinput" accept="images/*">
+        </p>
+
+        <img src="" id="imagepreview" alt="" height="100" width="100">
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="./signin.html">Login</a></p>
+  </div>
+
+  <script src="../js/signup.js"></script>
+</body>
+</html>

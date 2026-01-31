@@ -1,0 +1,79 @@
+
+// /* ================= USERS LIST ================= */
+// export async function getAllUsers(req, res) {
+//   const users = await userSchemaNew.find(
+//     { _id: { $ne: req.user.userId } },
+//     { password: 0 }
+//   );
+//   res.json({ ok: true, users });
+// }
+
+
+
+
+/* ================= SEND REQUEST ================= */
+// export async function sendRequest(req, res) {
+//   const { toUserId } = req.body;
+//   const { userId } = req.user;
+
+//   const toUser = await userSchemaNew.findById(toUserId);
+//   if (!toUser) return res.status(400).json({ ok: false });
+
+//   if (toUser.requests.includes(userId))
+//     return res.status(400).json({ ok: false });
+
+//   toUser.requests.push(userId);
+//   await toUser.save();
+
+//   res.json({ ok: true });
+// }
+
+// /* ================= ACCEPT REQUEST ================= */
+// export async function acceptRequest(req, res) {
+//   const { fromUserId } = req.body;
+//   const { userId } = req.user;
+
+//   const user = await userSchemaNew.findById(userId);
+//   const fromUser = await userSchemaNew.findById(fromUserId);
+
+//   user.requests = user.requests.filter(id => id.toString() !== fromUserId);
+
+//   user.friends.push(fromUserId);
+//   fromUser.friends.push(userId);
+
+//   await user.save();
+//   await fromUser.save();
+
+//   res.json({ ok: true });
+// }
+
+
+
+// export async function updateProfile(req, res) {
+//   try {
+//     const { username, description } = req.body;
+//     const userId = req.user.userId;
+
+//     const user = await userSchemaNew.findByIdAndUpdate(
+//       userId,
+//       { username, description },
+//       { new: true }
+//     ).select("-password");
+
+//     res.json({ ok: true, user });
+//   } catch (err) {
+//     res.status(500).json({ ok: false });
+//   }
+// }
+
+// export async function getFriends(req, res) {
+//   try {
+//     const user = await userSchemaNew.findById(req.user.userId)
+//       .populate("friends", "username description profilePic");
+
+//     res.json({ ok: true, friends: user.friends });
+//   } catch (err) {
+//     res.status(500).json({ ok: false });
+//   }
+  
+// }

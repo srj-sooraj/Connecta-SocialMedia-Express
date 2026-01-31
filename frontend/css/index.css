@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo img {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+    /* border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); */
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    background: #fff;
+    color: #203a43;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    background: #f0f0f0;
+}
+
+/* HERO SECTION */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-card h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-card p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* BUTTONS */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.btn.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.btn.outline {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.btn.outline:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero-card h1 {
+        font-size: 36px;
+    }
+    .hero-card {
+        padding: 25px;
+    }
+}

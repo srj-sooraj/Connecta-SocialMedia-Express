@@ -1,0 +1,300 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  min-height: 100vh;
+  background: #f4f6fb;
+  color: #222;
+}
+
+/* ================= HEADER ================= */
+header {
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f172a; /* premium dark */
+  color: #fff;
+}
+
+/* Logo */
+header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Right side (notify + profile) */
+header > div,
+header > span {
+  display: flex;
+  align-items: center;
+}
+
+/* Profile + notify wrapper */
+#profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+.notify{
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+/* Notification icon */
+#notify-btn {
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+#notify-btn:hover {
+  opacity: 1;
+}
+
+/* Profile image */
+#nav-profile-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ccc;
+}
+
+/* Username */
+#nav-username {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= POPUPS ================= */
+.hidden {
+  display: none;
+}
+
+/* Profile popup */
+#profile-popup {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  width: 240px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+#popup-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#popup-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+#popup-desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+#logout-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  background: #1e4ed8;
+}
+
+/* ================= NOTIFICATION POPUP ================= */
+#notify-popup {
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+#notify-popup div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+#notify-popup img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+#notify-popup span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#notify-popup button {
+  margin-left: auto;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* ================= MAIN ================= */
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #0f172a;
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+}
+
+/* ================= FRIEND & USER CARDS ================= */
+#friends-container > div,
+#users-container > div {
+  width: 260px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+#friends-container > div:hover,
+#users-container > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.12);
+}
+
+/* Avatar */
+#friends-container img,
+#users-container img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+  margin-bottom: 12px;
+}
+
+/* Name */
+#users-container h3,
+#friends-container h4 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Description */
+#users-container p,
+#friends-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* Add button */
+#users-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#users-container button:hover {
+  background: #1e4ed8;
+}
+
+/* ================= EMPTY TEXT ================= */
+.grid p {
+  color: #666;
+  font-size: 15px;
+}
+/* ================= NOTIFICATION ================= */
+
+#notify-wrapper {
+  position: relative;
+  margin-right: 16px;
+}
+
+#notify-btn {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Red badge */
+#notify-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Hide helper */
+.hidden {
+  display: none;
+}
+ 
+/* Bell shake animation */
+@keyframes bell-shake {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-10deg); }
+  100% { transform: rotate(0); }
+}
+
+.shake {
+  animation: bell-shake 0.6s ease;
+}

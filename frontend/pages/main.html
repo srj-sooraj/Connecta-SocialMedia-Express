@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+  <h2>Connecta</h2>
+
+  <div class="notify">
+    <div id="notify-wrapper">
+  <span id="notify-btn">🔔</span>
+  <span id="notify-count" class="hidden">0</span>
+</div>
+
+  <div id="profile-btn">
+    <img id="nav-profile-img">
+    <span id="nav-username"></span>
+  </div>
+</div>
+</header>
+
+<div id="profile-popup" class="hidden">
+  <img id="popup-img">
+  <p id="popup-name"></p>
+  <p id="popup-desc"></p>
+  <button id="logout-btn">Logout</button>
+</div>
+
+<div id="notify-popup" class="hidden"></div>
+
+<main>
+  <h2 style="text-align:center">Friends</h2>
+  <div id="friends-container" class="grid"></div>
+
+  <hr style="margin:30px 0">
+
+  <h2 style="text-align:center">Find Friends</h2>
+  <div id="users-container" class="grid"></div>
+</main>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

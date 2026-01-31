@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  width: 360px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+.card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.card input[type="submit"] {
+  background: #667eea;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card input[type="submit"]:hover {
+  background: #5a67d8;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card a {
+  color: #667eea;
+  text-decoration: none;
+}
